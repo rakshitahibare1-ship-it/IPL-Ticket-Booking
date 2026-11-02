@@ -1,0 +1,244 @@
+
+/* Website Colors */
+:root {
+    --primary: #071b3a;
+    --accent: #f5b700;
+    --background: #f4f6fa;
+    --text: #222222;
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+/* Navigation Bar */
+header {
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+nav h2 {
+    color: var(--accent);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+#home {
+    background: linear-gradient(135deg, #071b3a, #174b85);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#home h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    margin-bottom: 25px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary);
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#home a:hover {
+    background-color: white;
+}
+
+/* Sections */
+section {
+    padding: 40px 8%;
+    margin: 20px auto;
+}
+
+section h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+section h3 {
+    margin: 15px 0;
+}
+
+/* Lists */
+ul {
+    padding-left: 30px;
+}
+
+/* Match Schedule Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+
+tr:hover {
+    background-color: #fff4d0;
+}
+
+td a {
+    background-color: var(--accent);
+    color: var(--primary);
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Booking Form and Summary */
+.booking-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    flex: 2;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+/* Booking Summary Card */
+aside {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+aside h3 {
+    color: var(--primary);
+}
+
+/* Guidelines Cards */
+#guidelines article {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#guidelines article h3 {
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+    }
+
+    form, aside {
+        width: 100%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+}
