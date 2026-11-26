@@ -180,77 +180,72 @@
 
             <div class="booking-container">
 
-                <form id="ticketForm">
+<form id="ticketForm">
 
-                    <label for="match">Match:</label>
+    <label for="match">Match:</label>
+    <select id="match" name="match" required>
+        <option value="">Select Match</option>
+        <option value="RCB vs CSK">RCB vs CSK - Bengaluru</option>
+        <option value="MI vs KKR">MI vs KKR - Mumbai</option>
+        <option value="CSK vs RR">CSK vs RR - Chennai</option>
+        <option value="SRH vs RCB">SRH vs RCB - Hyderabad</option>
+    </select>
 
-                    <select id="match" name="match" required>
-                        <option value="">Select Match</option>
-                        <option value="RCB vs CSK">RCB vs CSK - Bengaluru</option>
-                        <option value="MI vs KKR">MI vs KKR - Mumbai</option>
-                        <option value="CSK vs RR">CSK vs RR - Chennai</option>
-                        <option value="SRH vs RCB">SRH vs RCB - Hyderabad</option>
-                    </select>
+    <br><br>
 
-                    <br><br>
+    <label for="stand">Stand Category:</label>
+    <select id="stand" name="stand" required>
+        <option value="">Select Stand</option>
+        <option value="General">General</option>
+        <option value="Premium">Premium</option>
+        <option value="VIP">VIP</option>
+    </select>
 
-                    <label for="stand">Stand Category:</label>
+    <br><br>
 
-                    <select id="stand" name="stand" required>
-                        <option value="">Select Stand</option>
-                        <option value="General">General</option>
-                        <option value="Premium">Premium</option>
-                        <option value="VIP">VIP</option>
-                    </select>
+    <label for="quantity">Number of Tickets:</label>
+    <input type="number" id="quantity" name="quantity"
+        min="1" max="10" value="1" required>
 
-                    <br><br>
+    <br><br>
 
-                    <label for="quantity">Number of Tickets:</label>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"
+        placeholder="Enter your name" required minlength="3">
 
-                    <input type="number" id="quantity" name="quantity"
-                        min="1" max="10" value="1" required>
+    <br><br>
 
-                    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"
+        placeholder="Enter your email" required>
 
-                    <label for="name">Name:</label>
+    <br><br>
 
-                    <input type="text" id="name" name="name"
-                        placeholder="Enter your name" required minlength="3">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone"
+        placeholder="Enter your phone number"
+        pattern="[0-9]{10}" required>
 
-                    <br><br>
+    <br><br>
 
-                    <label for="email">Email:</label>
+    <button type="submit">Confirm Booking</button>
 
-                    <input type="email" id="email" name="email"
-                        placeholder="Enter your email" required>
+</form>
 
-                    <br><br>
+<aside>
+    <h3>Booking Summary</h3>
 
-                    <label for="phone">Phone Number:</label>
+    <p><strong>Match:</strong> <span id="summaryMatch">Not selected</span></p>
 
-                    <input type="tel" id="phone" name="phone"
-                        placeholder="Enter your phone number"
-                        pattern="[0-9]{10}" required>
+    <p><strong>Stand:</strong> <span id="summaryStand">Not selected</span></p>
 
-                    <br><br>
+    <p><strong>Ticket Price:</strong> <span id="summaryPrice">₹0</span></p>
 
-                    <button type="submit">Confirm Booking</button>
+    <p><strong>Quantity:</strong> <span id="summaryQuantity">1</span></p>
 
-                </form>
+    <p><strong>Total Amount:</strong> <span id="summaryTotal">₹0</span></p>
+</aside>
 
-
-                <!-- BOOKING SUMMARY -->
-                <aside>
-
-                    <h3>Booking Summary</h3>
-
-                    <p><strong>Match:</strong> RCB vs CSK</p>
-                    <p><strong>Stand:</strong> General</p>
-                    <p><strong>Ticket Price:</strong> ₹1500</p>
-                    <p><strong>Quantity:</strong> 1</p>
-                    <p><strong>Total Amount:</strong> ₹1500</p>
-
-                </aside>
 
             </div>
 
