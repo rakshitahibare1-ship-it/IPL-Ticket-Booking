@@ -204,6 +204,97 @@ if (ticketForm) {
         showToast("Your booking has been confirmed!");
 
     });
+// ===== ACTIVITY: TEAM FILTER =====
+
+const teamFilter = document.getElementById("team-filter");
+const matchCards = document.querySelectorAll(".match-card");
+
+if (teamFilter) {
+
+    teamFilter.addEventListener("change", function () {
+
+        const selectedTeam = teamFilter.value;
+
+        matchCards.forEach(function (card) {
+
+            const teams = card.dataset.teams.split(" ");
+
+            if (
+                selectedTeam === "all" ||
+                teams.includes(selectedTeam)
+            ) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
+
+
+// ===== ACTIVITY: GRID AND LIST VIEW =====
+
+const matchGrid = document.getElementById("match-grid");
+const gridButton = document.getElementById("grid-view");
+const listButton = document.getElementById("list-view");
+
+if (matchGrid && gridButton && listButton) {
+
+    gridButton.addEventListener("click", function () {
+
+        matchGrid.classList.remove("list-view");
+
+    });
+
+    listButton.addEventListener("click", function () {
+
+        matchGrid.classList.add("list-view");
+
+    });
+
+}
+
+
+// ===== ACTIVITY: HAMBURGER MENU =====
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("open");
+
+        const isOpen = navLinks.classList.contains("open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+
+    });
+
+    // Close menu after clicking a navigation link
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
+
+}
+
 
 }
 

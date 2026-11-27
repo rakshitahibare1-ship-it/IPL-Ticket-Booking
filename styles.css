@@ -513,3 +513,246 @@ footer {
     }
 }
 
+/* ===== RESPONSIVE NAVIGATION BAR ===== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 0;
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== MATCH SCHEDULE CSS GRID ===== */
+
+#matches {
+    padding: 40px;
+}
+
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.match-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-top: 5px solid #ffb800;
+    transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-card h3 {
+    color: #ffb800;
+}
+
+.match-card h2 {
+    color: #0b1f3a;
+}
+
+.match-card p {
+    margin: 12px 0;
+}
+
+.book-btn {
+    display: inline-block;
+    background-color: #ffb800;
+    color: #0b1f3a;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== GRID AND LIST VIEW ===== */
+
+.match-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.view-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.view-controls button {
+    padding: 10px 18px;
+    background-color: #ffb800;
+    color: #0b1f3a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVE GUIDELINES SECTION ===== */
+
+#guidelines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+#guidelines h2 {
+    grid-column: 1 / -1;
+}
+
+#guidelines article {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== TABLET RESPONSIVENESS ===== */
+
+@media screen and (max-width: 900px) {
+
+    .match-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #guidelines {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar {
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    /* Match Cards */
+
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #matches {
+        padding: 20px;
+    }
+
+    /* Guidelines */
+
+    #guidelines {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* Home Section */
+
+    #home {
+        padding: 30px 20px;
+    }
+
+    /* Booking Section */
+
+    .booking-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Tables */
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* General spacing */
+
+    section {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+}
+
+
+/* ===== SMALL PHONE SCREENS ===== */
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .match-card {
+        padding: 18px;
+    }
+
+    .view-controls {
+        flex-wrap: wrap;
+    }
+
+    #matches select {
+        max-width: 100%;
+    }
+
+}
+

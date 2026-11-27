@@ -13,17 +13,31 @@
 
 <body>
 
-    <!-- HEADER AND NAVIGATION -->
-    <header>
-        <nav>
-            <h2>IPL 2026</h2>
+   
+<!-- HEADER AND NAVIGATION -->
+<header>
+    <nav class="navbar">
 
+        <h2 class="logo">IPL 2026</h2>
+
+        <!-- Hamburger Menu Button -->
+        <button class="menu-toggle" id="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="nav-links" id="nav-links">
             <a href="#matches">Matches</a>
             <a href="#booking">Book Ticket</a>
             <a href="#my-bookings">My Bookings</a>
             <a href="#guidelines">Guidelines</a>
-        </nav>
-    </header>
+        </div>
+
+    </nav>
+</header>
+
 
     <main>
 
@@ -81,94 +95,76 @@
         <!-- MATCH SCHEDULE SECTION -->
         <section id="matches">
 
-            <h2>Match Schedule</h2>
+    <h2>Match Schedule</h2>
 
-            <label for="team-filter">Filter by Team:</label>
+    <label for="team-filter">Filter by Team:</label>
 
-            <select id="team-filter">
-                <option value="all">All Teams</option>
-                <option value="CSK">Chennai Super Kings</option>
-                <option value="MI">Mumbai Indians</option>
-                <option value="RCB">Royal Challengers Bengaluru</option>
-                <option value="KKR">Kolkata Knight Riders</option>
-                <option value="RR">Rajasthan Royals</option>
-                <option value="SRH">Sunrisers Hyderabad</option>
-            </select>
+    <select id="team-filter">
+        <option value="all">All Teams</option>
+        <option value="CSK">Chennai Super Kings</option>
+        <option value="MI">Mumbai Indians</option>
+        <option value="RCB">Royal Challengers Bengaluru</option>
+        <option value="KKR">Kolkata Knight Riders</option>
+        <option value="RR">Rajasthan Royals</option>
+        <option value="SRH">Sunrisers Hyderabad</option>
+       </select>
 
-            <br><br>
+    <div class="view-controls">
+        <button id="grid-view">Grid View</button>
+        <button id="list-view">List View</button>
+    </div>
 
-            <table border="1">
+    <br>
 
-                <thead>
-                    <tr>
-                        <th>Match Number</th>
-                        <th>Teams</th>
-                        <th>Date & Time</th>
-                        <th>Venue</th>
-                        <th>General</th>
-                        <th>Premium</th>
-                        <th>VIP</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+            
+<div class="match-grid" id="match-grid">
 
-                <tbody>
+    <div class="match-card" data-teams="RCB CSK">
+        <h3>Match 1</h3>
+        <h2>RCB vs CSK</h2>
+        <p>📅 22 March 2026, 7:30 PM</p>
+        <p>📍 Bengaluru</p>
+        <p>General: ₹1500</p>
+        <p>Premium: ₹3000</p>
+        <p>VIP: ₹6000</p>
+        <a href="#booking" class="book-btn">Book Now</a>
+    </div>
 
-                    <tr>
-                        <td>Match 1</td>
-                        <td>RCB vs CSK</td>
-                        <td>22 March 2026, 7:30 PM</td>
-                        <td>Bengaluru</td>
-                        <td>₹1500</td>
-                        <td>₹3000</td>
-                        <td>₹6000</td>
-                        <td>
-                            <a href="#booking" class="book-btn">Book</a>
-                        </td>
-                    </tr>
+    <div class="match-card" data-teams="MI KKR">
+        <h3>Match 2</h3>
+        <h2>MI vs KKR</h2>
+        <p>📅 25 March 2026, 7:30 PM</p>
+        <p>📍 Mumbai</p>
+        <p>General: ₹1200</p>
+        <p>Premium: ₹2500</p>
+        <p>VIP: ₹5000</p>
+        <a href="#booking" class="book-btn">Book Now</a>
+    </div>
 
-                    <tr>
-                        <td>Match 2</td>
-                        <td>MI vs KKR</td>
-                        <td>25 March 2026, 7:30 PM</td>
-                        <td>Mumbai</td>
-                        <td>₹1200</td>
-                        <td>₹2500</td>
-                        <td>₹5000</td>
-                        <td>
-                            <a href="#booking" class="book-btn">Book</a>
-                        </td>
-                    </tr>
+    <div class="match-card" data-teams="CSK RR">
+        <h3>Match 3</h3>
+        <h2>CSK vs RR</h2>
+        <p>📅 28 March 2026, 7:30 PM</p>
+        <p>📍 Chennai</p>
+        <p>General: ₹1000</p>
+        <p>Premium: ₹2200</p>
+        <p>VIP: ₹4500</p>
+        <a href="#booking" class="book-btn">Book Now</a>
+    </div>
 
-                    <tr>
-                        <td>Match 3</td>
-                        <td>CSK vs RR</td>
-                        <td>28 March 2026, 7:30 PM</td>
-                        <td>Chennai</td>
-                        <td>₹1000</td>
-                        <td>₹2200</td>
-                        <td>₹4500</td>
-                        <td>
-                            <a href="#booking" class="book-btn">Book</a>
-                        </td>
-                    </tr>
+    <div class="match-card" data-teams="SRH RCB">
+        <h3>Match 4</h3>
+        <h2>SRH vs RCB</h2>
+        <p>📅 30 March 2026, 7:30 PM</p>
+        <p>📍 Hyderabad</p>
+        <p>General: ₹1300</p>
+        <p>Premium: ₹2800</p>
+        <p>VIP: ₹5500</p>
+        <a href="#booking" class="book-btn">Book Now</a>
+    </div>
 
-                    <tr>
-                        <td>Match 4</td>
-                        <td>SRH vs RCB</td>
-                        <td>30 March 2026, 7:30 PM</td>
-                        <td>Hyderabad</td>
-                        <td>₹1300</td>
-                        <td>₹2800</td>
-                        <td>₹5500</td>
-                        <td>
-                            <a href="#booking" class="book-btn">Book</a>
-                        </td>
-                    </tr>
+</div>
 
-                </tbody>
-
-            </table>
 
         </section>
 
